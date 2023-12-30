@@ -14,7 +14,7 @@ export const ProModal = () => {
 
   const { execute, isLoading } = useAction(stripeRedirect, {
     onSuccess: (data) => {
-      window.location.href = data;
+      window.location.href = data as string;
     },
     onError: (error) => {
       toast.error(error);
